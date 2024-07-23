@@ -238,9 +238,11 @@ __You can find instructions on how to run the experiments on your own datasets i
 The more experiments you run, the more space will be required by Docker. The easiest way to clean up all Docker images and
 containers afterwards is to run the following command in your terminal. Note that this will remove all other containers and images
 not related to RaQuN as well:
+
 ```
 docker system prune -a
 ```
+
 Please refer to the official documentation on how to remove specific [images](https://docs.docker.com/engine/reference/commandline/image_rm/) and [containers](https://docs.docker.com/engine/reference/commandline/container_rm/) from your system.
 
 ## Using RaQuN as a Library in Your Own Projects
@@ -254,10 +256,12 @@ for instructions on how to do so. Once prepared, you can build a JAR file contai
   ````
 * You can then find the JAR file containing RaQuN and all its dependencies as a library under `./target/RaQuN-jar-with-dependencies.jar`
 * Please refer to the documentation of your IDE or build system for instructions on how to add JARs as 
-dependencies. 
+dependencies.
 
 ### Examples 
+
 #### Matching a Dataset Stored in CSV Format
+
 The following presents a simple example on how to compute a matching for a dataset with RaQuN:
 ```java
 import java.util.Set;
@@ -282,6 +286,7 @@ public class Main {
 ```
 
 #### Matching a Dataset Created with Raw Data
+
 The following presents a simple example on how you can initialize the models of a dataset in code, and then match them 
 with RaQuN:
 ```java
