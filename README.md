@@ -202,6 +202,7 @@ The total runtime was about 3-4 days.
 ```
 
 ### Result Evaluation
+
 You can run the result evaluation by calling the experiment script with `evaluate`. The
 script will consider all data found under `./results`.
 ```shell
@@ -217,6 +218,7 @@ The script will generate figures and tables similar to the ones presented in our
 `./results/eval-results`.
 
 ### Docker Experiment Configuration
+
 By default, the properties used by Docker are configured to run the experiments as presented in our paper. We offer the 
 possibility to change the default configuration. 
 * Open the properties file which you want to adjust
@@ -232,6 +234,7 @@ possibility to change the default configuration.
 __You can find instructions on how to run the experiments on your own datasets in [EXPERIMENTS.md](EXPERIMENTS.md).__
 
 ### Clean-Up
+
 The more experiments you run, the more space will be required by Docker. The easiest way to clean up all Docker images and
 containers afterwards is to run the following command in your terminal. Note that this will remove all other containers and images
 not related to RaQuN as well:
@@ -241,6 +244,7 @@ docker system prune -a
 Please refer to the official documentation on how to remove specific [images](https://docs.docker.com/engine/reference/commandline/image_rm/) and [containers](https://docs.docker.com/engine/reference/commandline/container_rm/) from your system.
 
 ## Using RaQuN as a Library in Your Own Projects
+
 You can also use RaQuN as a Java Library in your own project. To do so, you will have to prepare your system the same way
 as for running the experiments without Docker. Please refer to the [REQUIREMENTS.md](REQUIREMENTS.md) and [INSTALL.md](INSTALL.md)
 for instructions on how to do so. Once prepared, you can build a JAR file containing RaQuN using Maven:
