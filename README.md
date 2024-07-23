@@ -24,6 +24,7 @@ Authors:
 Additionally, this repository comprises the [artifacts](https://github.com/AlexanderSchultheiss/RaQuN/releases/tag/SoSyM-Submission) for our MODELS'21 SoSyM Special Issue submission.
 
 ### Cite As
+
 ```bibtex
 @inproceedings{SBG+:MODELS21,
 	author = {Alexander Schulthei\ss{} and Paul Maximilian Bittner and Lars Grunske and Thomas Th{\"{u}}m and Timo Kehrer},
