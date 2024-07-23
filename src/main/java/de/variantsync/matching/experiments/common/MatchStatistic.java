@@ -1,6 +1,7 @@
 package de.variantsync.matching.experiments.common;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import de.variantsync.matching.raqun.similarity.WeightMetric;
 import de.variantsync.matching.raqun.data.RMatch;
 import de.variantsync.matching.raqun.data.RElement;
@@ -188,7 +189,7 @@ public class MatchStatistic {
             }
         }
 
-        final Gson gson = new Gson();
+        final Gson gson = new GsonBuilder().setPrettyPrinting().create();
         try (final PrintWriter writer = new PrintWriter(new FileOutputStream(new File(pathToFile), append))) {
             final String json = gson.toJson(this);
             writer.println(json);

@@ -23,11 +23,7 @@ def main():
 
     datasets_part_1 = [
         "hospitals"
-        , "warehouses"
-        , "random"
-        , "randomLoose"
-        , "randomTight"
-        , "Apogames"
+        , "example"
     ]
     datasets_part_2 = [
         "ppu"

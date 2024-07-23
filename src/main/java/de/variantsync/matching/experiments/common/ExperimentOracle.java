@@ -31,12 +31,12 @@ public class ExperimentOracle {
         fn = 0.0;
         final Map<String, Integer> numberOfClassOccurrencesTotal = countClassOccurrences(matches);
 
-        for (final RMatch tuple : matches) {
-            final Collection<RElement> nodesInTuple = tuple.getElements();
+        for (final RMatch match : matches) {
+            final Collection<RElement> elements = match.getElements();
             // Count the number of times each class appears in the tuple
             final Map<String, Integer> numberOfClassOccurrences = new HashMap<>();
-            for (final RElement node : nodesInTuple) {
-                final String id = node.getUUID();
+            for (final RElement elem : elements) {
+                final String id = elem.getUUID();
                 if (numberOfClassOccurrences.containsKey(id)) {
                     final int oldNumber = numberOfClassOccurrences.get(id);
                     numberOfClassOccurrences.put(id, oldNumber+1);
@@ -48,7 +48,7 @@ public class ExperimentOracle {
             // Now we count the number of TP, FP, FN for the current tuple
             for (final String id : numberOfClassOccurrences.keySet()) {
                 final int numberCurrent = numberOfClassOccurrences.get(id);
-                final int numberOther = nodesInTuple.size() - numberCurrent;
+                final int numberOther = elements.size() - numberCurrent;
 
                 // Count the tp, one for each correct match between members of a class
                 for (int i = numberCurrent-1; i > 0; i--) {
@@ -67,7 +67,6 @@ public class ExperimentOracle {
         }
         // We have to halve the number of fp, because we counted them twice
         fp /= 2;
-        calculateStats();
     }
 
     private void calculateStats() {
